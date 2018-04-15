@@ -12,7 +12,6 @@ import java.util.Map;
 @Service
 public class JSONProcessorServiceImpl implements JSONProcessorService {
 
-
     @Autowired
     private FileContentReader fileContentReader;
 

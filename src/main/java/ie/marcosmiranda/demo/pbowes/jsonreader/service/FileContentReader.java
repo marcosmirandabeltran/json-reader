@@ -1,6 +1,7 @@
 package ie.marcosmiranda.demo.pbowes.jsonreader.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import ie.marcosmiranda.demo.pbowes.jsonreader.bean.Event;
 import ie.marcosmiranda.demo.pbowes.jsonreader.bean.FileContent;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,7 +54,9 @@ public class FileContentReader {
         fileContent.setCounterErrors(countErrors);
         return fileContent;
     }
+
     private Event processLine(String line) throws IOException {
+        objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
         Event event = objectMapper.readValue(line, Event.class);
         return event;
     }

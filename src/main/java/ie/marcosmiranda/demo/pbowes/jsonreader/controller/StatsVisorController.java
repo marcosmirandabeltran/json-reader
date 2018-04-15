@@ -1,6 +1,5 @@
 package ie.marcosmiranda.demo.pbowes.jsonreader.controller;
 
-import ie.marcosmiranda.demo.pbowes.jsonreader.bean.FileContent;
 import ie.marcosmiranda.demo.pbowes.jsonreader.bean.Stats;
 import ie.marcosmiranda.demo.pbowes.jsonreader.service.JSONProcessorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,4 +19,5 @@ public class StatsVisorController {
 
         return serv.getStats();
     }
+
 }
